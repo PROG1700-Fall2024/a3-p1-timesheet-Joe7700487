@@ -29,11 +29,12 @@ def getAverage(day):
 
 # function to get days where hours were under 7
 def getSlackedDays(day):
+    minHours = 7
     # check every list item
     for i in range(len(day)):
         # check if list item is less than 7
-        if day[i] < 7:
-            print("Day #{0}: {1} hours".format(i + 1, day[i]))   
+        if day[i] < minHours:
+            print("Day #{0}: {1} hours".format(i + 1, day[i]))
 
 # function to return the days where you worked the most amount of hours
 def getMaxDays(day):
@@ -76,8 +77,6 @@ def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
     # Init global variables
     day = []
-    average = 0
-
     # get hours
     getHours(day)
     # output hours
