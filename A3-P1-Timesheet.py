@@ -8,8 +8,9 @@
 
 # function to ask the user for 5 days of hours
 def getHours(day):
+    days = 5
     # ask for hours for 5 days
-    for i in range(5):
+    for i in range(days):
         # get input
         hours = int(input("Enter hours worked on Day #{0}: ".format(i + 1)))
         # add input to the list
