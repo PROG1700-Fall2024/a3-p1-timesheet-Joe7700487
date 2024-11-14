@@ -20,15 +20,10 @@ def getHours(day):
         else:
             print("Hours must be a whole number")
             return
-        # if the user enters a negative number, return an error message
-        if hours < 0:
+        # if the user enters number not between 0-24, return an error message
+        if hours < 0 or hours > 24:
             print("Hours must be between 0 and 24")
             return
-        # if the user enters a number greater than 24, return an error
-        elif hours > 24:
-            print("Hours must be between 0 and 24")
-            return
-        # add input to the list
         day.append(hours)
 
 # function to calculate the average of the list
