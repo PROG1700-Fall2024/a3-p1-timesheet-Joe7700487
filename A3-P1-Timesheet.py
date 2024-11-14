@@ -12,7 +12,22 @@ def getHours(day):
     # ask for hours for 5 days
     for i in range(days):
         # get input
-        hours = int(input("Enter hours worked on Day #{0}: ".format(i + 1)))
+        hours = input("Enter hours worked on Day #{0}: ".format(i + 1))
+        # if user input a number, convert to int
+        if hours.isnumeric():
+            hours = int(hours)
+        # if user didnt input an int, return an error message
+        else:
+            print("Hours must be a whole number")
+            return
+        # if the user enters a negative number, return an error message
+        if hours < 0:
+            print("Hours must be between 0 and 24")
+            return
+        # if the user enters a number greater than 24, return an error
+        elif hours > 24:
+            print("Hours must be between 0 and 24")
+            return
         # add input to the list
         day.append(hours)
 
@@ -80,6 +95,13 @@ def main():
     day = []
     # get hours
     getHours(day)
+    # if the length of the list is less than 5
+    # then an invalid input must have been given
+    if len(day) < 5:
+        # end the program due to invalid input
+        #print("Invalid input try again.")
+        return
+    print(day)
     # output hours
     outputHours(day)
 
