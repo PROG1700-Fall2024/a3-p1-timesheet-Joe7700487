@@ -92,16 +92,16 @@ def outputHours(day):
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
     # Init global variables
+    days = 5
     day = []
     # get hours
     getHours(day)
     # if the length of the list is less than 5
     # then an invalid input must have been given
-    if len(day) < 5:
+    if len(day) < days:
         # end the program due to invalid input
         #print("Invalid input try again.")
         return
-    print(day)
     # output hours
     outputHours(day)
 
